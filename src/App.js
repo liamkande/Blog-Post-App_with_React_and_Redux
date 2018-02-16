@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="container">
       Ok we ready to start coding!
-      <PostIndex/>
+      <PostIndex />
       </div>
     );
   }
