@@ -1,6 +1,5 @@
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-
 import App from './App'
 import PostNew from './containers/posts_new'
 
