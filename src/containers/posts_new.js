@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form' // add reset here if you want to use form reset below
 import { createPost } from '../actions/index'
-import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Required from '../components/inputFieldError'
 
 
@@ -36,7 +36,6 @@ import Required from '../components/inputFieldError'
 let formIsValide = false
 
 class PostsNew extends Component {
-
   onSubmit(props) {
       createPost(props)
       formIsValide  = true
@@ -82,9 +81,8 @@ class PostsNew extends Component {
 //connect: 1rst argument is mapStateToProps, 2nd is mapDispatchToProps
 //reduxForm: 1rst is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 
-export default withRouter (reduxForm({
+export default reduxForm({
   form: 'PostsNewForm'
   //This could be use if we want to reset the form value after valid entry see function above.
   //onSubmitSuccess: afterSubmit,
 }, null, { createPost })(PostsNew)
-)
